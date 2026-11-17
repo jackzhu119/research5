@@ -260,7 +260,7 @@ def run_anysleep(cfg, out, x, sf, truth, start, end, device, pilot, diagnostics)
             'rss_after_bytes': psutil.Process().memory_info().rss,
             'cuda_peak_allocated_bytes': torch.cuda.max_memory_allocated() if device.startswith('cuda') else None,
             'cuda_peak_reserved_bytes': torch.cuda.max_memory_reserved() if device.startswith('cuda') else None,
-            'oracle_statistics': 'fixedstats' in name, 'oracle_attention': fixed is not None,
+            'oracle_statistics': ('fixedstats' in name or 'fixedboth' in name), 'oracle_attention': fixed is not None,
             'complete_edf': True, 'chunks': 1})
         write_json(out / 'inference_runs.json', run_log)
         return logits, {i: v.copy() for i, v in probe.values.items()}
@@ -437,6 +437,8 @@ def main():
         return
     out = ROOT / 'results' / a.run_id
     out.mkdir(parents=True, exist_ok=False)
+    if os.environ.get('RESEARCH5_SOURCE_IDENTITY_JSON'):
+        write_json(out / 'pipeline_source_identity.json', json.loads(os.environ['RESEARCH5_SOURCE_IDENTITY_JSON']))
     write_json(out / 'config.json', cfg)
     write_json(out / 'status.json', {'status': 'RUNNING', 'phase': a.phase, 'started_utc': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())})
     try:

@@ -24,8 +24,14 @@ Client compatibility limit: registration did not hot-load a new native tool name
 
 The remote session is separate from the browser notebook. Runtime/session execution does not establish attachment to any browser notebook. The browser notebook was independently verified above.
 
-## Durable background execution
+## Google Drive persistence and the final execution destination
 
-The local bridge disconnects when the computer shuts down. Colab runtimes can expire and are not a durable unattended job service. In response to the user's explicit request, an independent GitHub Actions workflow is being deployed to the public research5 repository using standard hosted CPU runners. It needs no Google OAuth credentials and writes artifacts even on failure. Actual deployment/run status and links must be read from PILOT_REPORT.md and the repository Actions page; configuration alone is not proof of a running job.
+The user's final choice is **Colab compute plus Google Drive storage**, with GitHub retaining code. The earlier Actions job actually started but failed dependency resolution (YASA requires pandas>=2.3); failure artifacts were saved. Actions is now a manual-only backup and is not the selected compute path.
+
+Google Drive folder: [research5](https://drive.google.com/drive/folders/14k_7KUZu535k0oKM7SDWisLK7HWvifBO). Stage-A raw data/model/result archive (48,946,810 bytes) and Stage-B paired/oracle archive (11,407,347 bytes) were uploaded with connector metadata readback. The browser Colab runtime mounted Drive through the user's normal authorization. An executed cell wrote and read `COLAB_DRIVE_OK.txt`; the independent Drive connector found that file inside the same folder, confirming that the mounted account and connected destination match.
+
+`pilot/colab_drive_run.py` uses an isolated scientific environment (pandas3.1.1 rather than changing the notebook kernel), checks dependency compatibility, keeps data/models/results/logs on Drive, records progress and checksums, resumes verified completed phases, and preserves partial failures. Compatible single-record A/B gates precede the frozen limited development queue. The local computer is not required after the code cell starts in Colab. This is not a guarantee of perpetual execution: normal Colab runtime reclamation or quotas can interrupt it, and a reclaimed runtime cannot automatically reauthorize Drive. State/checkpoints survive on Drive; a later authorized runtime can resume.
+
+The current actual start/status is recorded in the Drive status files and PILOT_REPORT.md; a prepared driver alone is not counted as running.
 
 Official setup sources: [browser bridge README](https://github.com/googlecolab/colab-mcp), [remote MCP reference](https://developers.google.com/colab/api/reference/mcp).

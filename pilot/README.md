@@ -8,7 +8,15 @@ any extended wake recording. No time crop, sliding inference or chunking is used
 One source participant, one position and one duration cannot justify inference
 about a population or a go decision for a new method.
 
-With the appropriate PyTorch build already installed:
+Use an isolated Python environment with the appropriate PyTorch build installed.
+YASA 0.8.1 requires pandas >=2.3. In Colab, do not force its base environment back
+to pandas 2.2.3 to satisfy Colab's own package constraint: use a separate virtual
+environment/kernel, or the independent GitHub Actions environment. The prepared
+notebook's dependency cell must target that isolated environment before reuse.
+An earlier Colab run executed with pandas 2.2.3 despite this metadata conflict;
+its numerical results require confirmation in the compatible cloud environment.
+
+From the isolated environment:
 
 ```text
 python -m pip install -r requirements-pilot.txt

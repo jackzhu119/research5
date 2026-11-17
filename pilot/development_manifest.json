@@ -1,0 +1,307 @@
+{
+  "schema": "research5-development-queue-v1",
+  "queue_id": "development-queue-v1",
+  "frozen_utc": "2026-11-17T09:07:11.761746+00:00",
+  "status": "PLANNED_NOT_EXECUTED",
+  "directory_evidence": {
+    "url": "https://physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/",
+    "fetched_utc": "2026-11-17T09:07:11.761756+00:00",
+    "html_sha256": "c1dc045843226b21174b87ac124e214d4ed5270184399dd243e3693a71008f61",
+    "edf_or_checkpoint_downloaded_by_plan": false
+  },
+  "scope": "Development on exposed/public data; no independent external-validation claim",
+  "protocol_deviation": "First bounded expansion is SC400-SC409 (10), no ID substitution; original plan allowed 20 candidates.",
+  "base_config": {
+    "protocol_version": "2026-11-17-smoke-v1",
+    "anysleep_commit": "88e13e31b3fa02482b650a844f6665f2cbbdb82c",
+    "checkpoint": "anysleep-run1.pth",
+    "checkpoint_git_blob": "8e545c4af53a7466b0b9df26a3d554ced47ac12d",
+    "dataset": "sleep-edfx/1.0.0",
+    "participant": "SC400",
+    "record": "SC4001E0",
+    "psg": "SC4001E0-PSG.edf",
+    "hypnogram": "SC4001EC-Hypnogram.edf",
+    "channels": [
+      "EEG Fpz-Cz",
+      "EEG Pz-Oz",
+      "EOG horizontal"
+    ],
+    "yasa_eeg": "EEG Fpz-Cz",
+    "yasa_eog": "EOG horizontal",
+    "corrupt_channels": [
+      0
+    ],
+    "position_rule": "middle valid 30s epoch by ordinal index; labels only, never predictions",
+    "position_fraction": 0.5,
+    "duration_seconds": 30,
+    "clip_volts": 2e-05,
+    "noise_sd_volts": 0.0001,
+    "noise_seed": 20261117,
+    "kinds": [
+      "noop",
+      "flat",
+      "clip",
+      "noise"
+    ],
+    "distance_edges_seconds": [
+      0,
+      30,
+      60,
+      120,
+      300
+    ],
+    "inference": "complete EDF, batch=1, eval, float32, no chunking",
+    "label_map": {
+      "Sleep stage W": 0,
+      "Sleep stage 1": 1,
+      "Sleep stage 2": 2,
+      "Sleep stage 3": 3,
+      "Sleep stage 4": 3,
+      "Sleep stage R": 4
+    },
+    "unscored_label": -1,
+    "development_only": true
+  },
+  "source_identity": {
+    "algorithm": "sha256",
+    "anysleep_commit": "88e13e31b3fa02482b650a844f6665f2cbbdb82c",
+    "files": {
+      "manifests/anysleep_sources.json": "0bdefabf12470bfbcbdfff9b195ce9bc4e7500150ca665dd9a7a5475dbc4eab3",
+      "pilot/paired_tools.py": "0c33f8c164515b6e6d4d4d0b5b427687abd8dc3fa84ca5a1646cfe7f84e5445f",
+      "pilot/run_pilot.py": "e5c5fb3c7baef6c3ab5f06d4560f6c82f16674eef90813486a7543118f6c369a",
+      "pilot/support.py": "5368f4dc904d3ea8289116a54ff449175308dd6dfb348addf96569cf98521d53",
+      "requirements-cloud.txt": "751d5623818d25be797e8fafc98b69c3398490552dc2322d316ba36cd2c4b907",
+      "vendor/anysleep/LICENSE": "773ab33afb82b4249e23cc758b37f82bad7e9afeb4bfd7386baa3bf2dc4be9bd",
+      "vendor/anysleep/base/model/anysleep.py": "d3b23f5314988a89d9b8319ef1ee224a8df62844acd749bdbdb66adaefc90c28",
+      "vendor/anysleep/examples/anysleep_no_hydra.py": "b94a9b62216a663e2923138b42c9439ccfa7b94cc8ca95729e2548c80afe785f",
+      "vendor/anysleep/examples/predict_edf_file_logits_plain.py": "992fb40d7caceddd727bfa840ff733c3c97ee49b0df2e36bf10a9678d657af44"
+    }
+  },
+  "participants": [
+    {
+      "participant": "SC400",
+      "night_rule": "first night, literal directory match",
+      "psg_candidates": [
+        "SC4001E0-PSG.edf"
+      ],
+      "hypnogram_candidates": [
+        "SC4001EC-Hypnogram.edf"
+      ],
+      "availability": "AVAILABLE",
+      "record": "SC4001E0",
+      "psg": "SC4001E0-PSG.edf",
+      "hypnogram": "SC4001EC-Hypnogram.edf",
+      "psg_url": "https://physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/SC4001E0-PSG.edf",
+      "hypnogram_url": "https://physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/SC4001EC-Hypnogram.edf",
+      "anysleep_record_id": "001",
+      "anysleep_subject_id": "00",
+      "anysleep_published_split": "test"
+    },
+    {
+      "participant": "SC401",
+      "night_rule": "first night, literal directory match",
+      "psg_candidates": [
+        "SC4011E0-PSG.edf"
+      ],
+      "hypnogram_candidates": [
+        "SC4011EH-Hypnogram.edf"
+      ],
+      "availability": "AVAILABLE",
+      "record": "SC4011E0",
+      "psg": "SC4011E0-PSG.edf",
+      "hypnogram": "SC4011EH-Hypnogram.edf",
+      "psg_url": "https://physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/SC4011E0-PSG.edf",
+      "hypnogram_url": "https://physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/SC4011EH-Hypnogram.edf",
+      "anysleep_record_id": "011",
+      "anysleep_subject_id": "01",
+      "anysleep_published_split": "train"
+    },
+    {
+      "participant": "SC402",
+      "night_rule": "first night, literal directory match",
+      "psg_candidates": [
+        "SC4021E0-PSG.edf"
+      ],
+      "hypnogram_candidates": [
+        "SC4021EH-Hypnogram.edf"
+      ],
+      "availability": "AVAILABLE",
+      "record": "SC4021E0",
+      "psg": "SC4021E0-PSG.edf",
+      "hypnogram": "SC4021EH-Hypnogram.edf",
+      "psg_url": "https://physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/SC4021E0-PSG.edf",
+      "hypnogram_url": "https://physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/SC4021EH-Hypnogram.edf",
+      "anysleep_record_id": "021",
+      "anysleep_subject_id": "02",
+      "anysleep_published_split": "test"
+    },
+    {
+      "participant": "SC403",
+      "night_rule": "first night, literal directory match",
+      "psg_candidates": [
+        "SC4031E0-PSG.edf"
+      ],
+      "hypnogram_candidates": [
+        "SC4031EC-Hypnogram.edf"
+      ],
+      "availability": "AVAILABLE",
+      "record": "SC4031E0",
+      "psg": "SC4031E0-PSG.edf",
+      "hypnogram": "SC4031EC-Hypnogram.edf",
+      "psg_url": "https://physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/SC4031E0-PSG.edf",
+      "hypnogram_url": "https://physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/SC4031EC-Hypnogram.edf",
+      "anysleep_record_id": "031",
+      "anysleep_subject_id": "03",
+      "anysleep_published_split": "train"
+    },
+    {
+      "participant": "SC404",
+      "night_rule": "first night, literal directory match",
+      "psg_candidates": [
+        "SC4041E0-PSG.edf"
+      ],
+      "hypnogram_candidates": [
+        "SC4041EC-Hypnogram.edf"
+      ],
+      "availability": "AVAILABLE",
+      "record": "SC4041E0",
+      "psg": "SC4041E0-PSG.edf",
+      "hypnogram": "SC4041EC-Hypnogram.edf",
+      "psg_url": "https://physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/SC4041E0-PSG.edf",
+      "hypnogram_url": "https://physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/SC4041EC-Hypnogram.edf",
+      "anysleep_record_id": "041",
+      "anysleep_subject_id": "04",
+      "anysleep_published_split": "train"
+    },
+    {
+      "participant": "SC405",
+      "night_rule": "first night, literal directory match",
+      "psg_candidates": [
+        "SC4051E0-PSG.edf"
+      ],
+      "hypnogram_candidates": [
+        "SC4051EC-Hypnogram.edf"
+      ],
+      "availability": "AVAILABLE",
+      "record": "SC4051E0",
+      "psg": "SC4051E0-PSG.edf",
+      "hypnogram": "SC4051EC-Hypnogram.edf",
+      "psg_url": "https://physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/SC4051E0-PSG.edf",
+      "hypnogram_url": "https://physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/SC4051EC-Hypnogram.edf",
+      "anysleep_record_id": "051",
+      "anysleep_subject_id": "05",
+      "anysleep_published_split": "train"
+    },
+    {
+      "participant": "SC406",
+      "night_rule": "first night, literal directory match",
+      "psg_candidates": [
+        "SC4061E0-PSG.edf"
+      ],
+      "hypnogram_candidates": [
+        "SC4061EC-Hypnogram.edf"
+      ],
+      "availability": "AVAILABLE",
+      "record": "SC4061E0",
+      "psg": "SC4061E0-PSG.edf",
+      "hypnogram": "SC4061EC-Hypnogram.edf",
+      "psg_url": "https://physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/SC4061E0-PSG.edf",
+      "hypnogram_url": "https://physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/SC4061EC-Hypnogram.edf",
+      "anysleep_record_id": "061",
+      "anysleep_subject_id": "06",
+      "anysleep_published_split": "train"
+    },
+    {
+      "participant": "SC407",
+      "night_rule": "first night, literal directory match",
+      "psg_candidates": [
+        "SC4071E0-PSG.edf"
+      ],
+      "hypnogram_candidates": [
+        "SC4071EC-Hypnogram.edf"
+      ],
+      "availability": "AVAILABLE",
+      "record": "SC4071E0",
+      "psg": "SC4071E0-PSG.edf",
+      "hypnogram": "SC4071EC-Hypnogram.edf",
+      "psg_url": "https://physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/SC4071E0-PSG.edf",
+      "hypnogram_url": "https://physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/SC4071EC-Hypnogram.edf",
+      "anysleep_record_id": "071",
+      "anysleep_subject_id": "07",
+      "anysleep_published_split": "train"
+    },
+    {
+      "participant": "SC408",
+      "night_rule": "first night, literal directory match",
+      "psg_candidates": [
+        "SC4081E0-PSG.edf"
+      ],
+      "hypnogram_candidates": [
+        "SC4081EC-Hypnogram.edf"
+      ],
+      "availability": "AVAILABLE",
+      "record": "SC4081E0",
+      "psg": "SC4081E0-PSG.edf",
+      "hypnogram": "SC4081EC-Hypnogram.edf",
+      "psg_url": "https://physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/SC4081E0-PSG.edf",
+      "hypnogram_url": "https://physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/SC4081EC-Hypnogram.edf",
+      "anysleep_record_id": "081",
+      "anysleep_subject_id": "08",
+      "anysleep_published_split": "valid"
+    },
+    {
+      "participant": "SC409",
+      "night_rule": "first night, literal directory match",
+      "psg_candidates": [
+        "SC4091E0-PSG.edf"
+      ],
+      "hypnogram_candidates": [
+        "SC4091EC-Hypnogram.edf"
+      ],
+      "availability": "AVAILABLE",
+      "record": "SC4091E0",
+      "psg": "SC4091E0-PSG.edf",
+      "hypnogram": "SC4091EC-Hypnogram.edf",
+      "psg_url": "https://physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/SC4091E0-PSG.edf",
+      "hypnogram_url": "https://physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/SC4091EC-Hypnogram.edf",
+      "anysleep_record_id": "091",
+      "anysleep_subject_id": "09",
+      "anysleep_published_split": "valid"
+    }
+  ],
+  "positions": [
+    0.25,
+    0.5,
+    0.75
+  ],
+  "duration_seconds": 30,
+  "models": [
+    "anysleep",
+    "yasa"
+  ],
+  "phase": "B",
+  "oracle_diagnostics": false,
+  "budget": {
+    "cumulative_wall_seconds": 14400,
+    "keepalive": false,
+    "timeout_action": "terminate current subprocess and preserve partial outputs"
+  },
+  "analysis": {
+    "primary_region": "30 <= epoch-edge gap seconds < 300, scored and raw unmodified",
+    "other_region": "all scored raw-unmodified epochs",
+    "kinds_separate": [
+      "noop",
+      "flat",
+      "clip",
+      "noise"
+    ],
+    "participant_aggregation": "equal mean of all three completed positions",
+    "group_aggregation": "equal participants, complete 3-position participants only",
+    "bootstrap_seed": 20261117,
+    "bootstrap_replicates": 20000,
+    "practical_net_error_fraction": 0.01,
+    "minimum_complete_participants": 10,
+    "stage": "development, descriptive intervals, no multiplicity-adjusted confirmation",
+    "new_method_training_allowed": false
+  }
+}

@@ -38,8 +38,10 @@ artifact before expiry and preserve it in the local research5 results archive;
 an Actions artifact is not permanent storage. The Actions run summary reports
 stage statuses and only numerical outputs actually written by executed code.
 
-`requirements-cloud.txt` fixes the scientific packages to the setup versions
-observed in the first Colab run. CPU PyTorch 2.14.1 is installed from the official
+`requirements-cloud.txt` fixes the scientific packages, including pandas 3.1.1,
+in a separate environment satisfying YASA 0.8.1's pandas >=2.3 requirement.
+The earlier Colab execution with pandas 2.2.3 had a dependency-metadata conflict
+and needs compatible-environment confirmation. CPU PyTorch 2.14.1 is installed from the official
 PyTorch CPU index. The installed resolution is saved again per execution.
 Actions are pinned to verified upstream v7 commit identities as of 2026-11-17.
 
