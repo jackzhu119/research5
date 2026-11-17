@@ -197,9 +197,14 @@ def mark_completed(folder):
 
 
 ENV_PROBE = '''
-import importlib.metadata as md, json, pathlib, torch
+import importlib.metadata as md, json, pathlib, sys, torch
 from packaging.requirements import Requirement
 from packaging.version import Version
+if sys.prefix == sys.base_prefix:
+    raise RuntimeError("Scientific child is not isolated in a virtual environment")
+torch_inherited = not pathlib.Path(torch.__file__).resolve().is_relative_to(pathlib.Path(sys.prefix).resolve())
+if not torch_inherited:
+    raise RuntimeError("Expected to inherit the runtime PyTorch rather than install a separate copy")
 root = pathlib.Path.cwd()
 seeds = [Requirement(x.strip()).name for x in (root / "requirements-cloud.txt").read_text().splitlines()
          if x.strip() and not x.lstrip().startswith("#")] + ["torch"]
@@ -220,7 +225,9 @@ while pending:
         pending.append(req.name)
 if failures: raise RuntimeError("Scientific dependency closure mismatch: " + repr(failures))
 keys = ["torch", "numpy", "scipy", "pandas", "scikit-learn", "mne", "yasa", "lightgbm", "antropy", "numba", "joblib"]
-info = {"versions": {n: md.version(n) for n in keys}, "python": __import__("sys").version,
+info = {"versions": {n: md.version(n) for n in keys}, "python": sys.version,
+        "sys_prefix": sys.prefix, "base_prefix": sys.base_prefix,
+        "torch_module_file": torch.__file__, "torch_inherited_from_runtime": torch_inherited,
         "cuda_available": torch.cuda.is_available(),
         "gpu": torch.cuda.get_device_name(0) if torch.cuda.is_available() else None,
         "dependency_check": "scientific dependency closure only; unrelated inherited Colab UI packages not imported"}
@@ -275,9 +282,14 @@ def main():
         workspace = prepare_workspace(source, project, files, code_id)
         venv = Path('/content/research5-venvs') / code_id
         python = venv / 'bin/python'
-        if not python.is_file():
-            runner.command([sys.executable, '-m', 'venv', '--system-site-packages', str(venv)], 'create-environment', workspace)
-        runner.command([python, '-m', 'pip', 'install', '-r', workspace / 'requirements-cloud.txt'], 'install-scientific-environment', workspace)
+        # Colab's /usr/bin/python may lack ensurepip. Recreate the environment
+        # configuration safely even after a partially failed earlier creation.
+        runner.command([sys.executable, '-m', 'venv', '--without-pip', '--system-site-packages', str(venv)],
+                       'create-environment', workspace)
+        # Modern base pip can manage a target environment that has no pip of its
+        # own; it installs into that environment rather than the notebook kernel.
+        runner.command([sys.executable, '-m', 'pip', '--python', python, 'install', '-r',
+                        workspace / 'requirements-cloud.txt'], 'install-scientific-environment', workspace)
         runner.command([python, '-c', ENV_PROBE], 'validate-scientific-environment', workspace)
         log = (logdir / 'validate-scientific-environment.log').read_text(encoding='utf-8')
         env = json.loads(next(line.split('=', 1)[1] for line in log.splitlines() if line.startswith('RESEARCH5_ENV_JSON=')))

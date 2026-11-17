@@ -13,10 +13,13 @@ ephemeral `/content` files. Links to the persistent directories are created in
 the local execution workspace, so Drive does not need to support symlinks.
 Only the one predeclared Sleep-EDF record and one checkpoint are downloaded.
 
-The driver creates an isolated virtual environment with `--system-site-packages`
-to reuse the runtime's installed CPU/GPU PyTorch, then installs the fixed
+The driver creates an isolated virtual environment with `--without-pip
+--system-site-packages` to avoid Colab Python's missing ensurepip while reusing
+the runtime's installed CPU/GPU PyTorch. It reruns that configuration step even
+after partial creation, and uses the base `pip --python <venv-python>` to install the fixed
 scientific packages there, including pandas 3.1.1 required by YASA 0.8.1. This
-does not replace pandas in the notebook kernel. It validates the dependency
+does not replace pandas in the notebook kernel. It verifies a distinct child
+`sys.prefix`, records the inherited PyTorch path, and validates the dependency
 closure of the scientific pipeline; inherited Colab UI packages are not imported
 into that subprocess and their unrelated base-environment constraints are not
 used to downgrade the scientific packages. Actual versions are saved to Drive.
