@@ -32,6 +32,8 @@ Google Drive folder: [research5](https://drive.google.com/drive/folders/14k_7KUZ
 
 `pilot/colab_drive_run.py` uses an isolated scientific environment (pandas3.1.1 rather than changing the notebook kernel), checks dependency compatibility, keeps data/models/results/logs on Drive, records progress and checksums, resumes verified completed phases, and preserves partial failures. Compatible single-record A/B gates precede the frozen limited development queue. The local computer is not required after the code cell starts in Colab. This is not a guarantee of perpetual execution: normal Colab runtime reclamation or quotas can interrupt it, and a reclaimed runtime cannot automatically reauthorize Drive. State/checkpoints survive on Drive; a later authorized runtime can resume.
 
-The current actual start/status is recorded in the Drive status files and PILOT_REPORT.md; a prepared driver alone is not counted as running.
+Actual start was verified: `colab-drive-20261117-v2`, 2026-11-17 17:20:40 Asia/Shanghai. Drive independently returned RUNNING/stage-a and the compatible isolated environment record. The pipeline's own source ID is `1b7b69e9a79ca03e1be5`; source bundle SHA256 is `62c7991a2a6c600e162656af591126264b057cbbedcb84b1a0a537da20538c07`. See [live status folder](https://drive.google.com/drive/folders/1i-q-8btlTDvBx9b7M4SqL5BU4Q-B6nvs). This verifies an actual server-side start, not completion of all queued work. The earlier v1 ensurepip bootstrap failure is retained separately.
+
+At 17:23:44 Asia/Shanghai, independent Drive readback advanced to RUNNING/stage-b, verifying automatic transition after the compatible stage-A gate. No local next-step command was needed. The queue remains pending its upstream gates; normal runtime limits apply.
 
 Official setup sources: [browser bridge README](https://github.com/googlecolab/colab-mcp), [remote MCP reference](https://developers.google.com/colab/api/reference/mcp).

@@ -47,7 +47,10 @@ AnySleep固定统计量/全部通道权重/两者的oracle变体也没有未修�
 ## 后台存储与正在准备 / 待运行
 
 - 用户最终指定Colab计算、Google Drive持久保存。目标文件夹为[research5](https://drive.google.com/drive/folders/14k_7KUZu535k0oKM7SDWisLK7HWvifBO)。原始数据/模型与阶段A包、阶段B结果包已上传；Colab挂载Drive后写入并回读COLAB_DRIVE_OK，且connector独立查到同folder内的文件。
-- GitHub保留代码；原Actions方案首个任务安装失败后，按用户选择已改为手动备用，不作为当前计算路径。后台Drive驱动使用独立环境、所有数据/模型/结果/日志直接写Drive、阶段状态/校验与可恢复队列。是否已启动须以Drive的status/heartbeat和实际执行回执为准。
+- GitHub保留代码；原Actions方案首个任务安装失败后，按用户选择已改为手动备用，不作为当前计算路径。后台Drive驱动使用独立环境、所有数据/模型/结果/日志直接写Drive、阶段状态/校验与可恢复队列。
+- **已实际启动** `colab-drive-20261117-v2`：2026-11-17 17:20:40（Asia/Shanghai），代码身份1b7b69e9a79ca03e1be5，上传包SHA256为62c7991a2a6c600e162656af591126264b057cbbedcb84b1a0a537da20538c07。Drive独立回读状态为RUNNING/stage-a，且环境记录确认独立prefix、继承runtime PyTorch、pandas3.1.1、YASA0.8.1，科学依赖闭包检查通过。[实际状态目录](https://drive.google.com/drive/folders/1i-q-8btlTDvBx9b7M4SqL5BU4Q-B6nvs)。这是启动证据，不是声称后续全部任务完成。
+- 2026-11-17 17:23:44，Drive独立回读变为 **RUNNING/stage-b**：兼容环境的阶段A已通过，驱动已自动衔接阶段B，无需本机下一条指令。阶段B之后的开发队列仍以自身状态为准，未预报为已完成。
+- Drive初版v1因Colab系统Python的ensurepip不可用而失败，原日志与状态保留。v2已实际通过`venv --without-pip`与base pip `--python`管理目标环境的启动测试，并进入模型计算。真实执行中pandas提示继承的可选bottleneck1.4.2低于其加速推荐版本；记录该警告，不将其当已消失。
 - 单晚兼容环境A/B通过后，预定10人×3个时间位置的开发队列可自动继续，4小时有限预算；参与者为统计单位，不根据错误选择位置。若Colab回收，不能自动保证重新申请或重新授权；已完成阶段保留，下一次运行按版本/校验继续。
 - CAP、小规模多参与者复核、简单基线、匹配扰动增强、任何新方法训练均未完成。
 
