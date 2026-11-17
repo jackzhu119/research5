@@ -1,0 +1,16 @@
+# Core scientific versions observed in the first Colab setup; resolved packages
+# and CPU PyTorch are exported again by every actual GitHub Actions run.
+numpy==2.4.6
+scipy==1.16.3
+pandas==2.2.3
+scikit-learn==1.6.1
+mne==1.13.2
+matplotlib==3.11.2
+yasa==0.8.1
+lightgbm==4.6.0
+antropy==0.2.3
+numba==0.64.0
+llvmlite==0.46.0
+joblib==1.6.0
+psutil>=6.1,<9
+requests>=2.32,<3

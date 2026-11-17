@@ -1,0 +1,2 @@
+dataset_version,participant,record,role,psg,hypnogram,status,statistical_unit_note
+sleep-edfx/1.0.0,SC400,SC4001E0,engineering_development,SC4001E0-PSG.edf,SC4001EC-Hypnogram.edf,predeclared_before_predictions,One person; epochs and corruption repetitions are not independent participants

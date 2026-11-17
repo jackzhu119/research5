@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+data/
+models/
+*.part
+# Keep scientific result arrays/tables/logs local and review their size before push.
+SKILLS_INVENTORY.json
+logs/local_bridge*
+logs/remote_connection_validation.json
+results/

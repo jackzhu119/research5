@@ -1,0 +1,23 @@
+[
+  {
+    "url": "https://physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/SC4001E0-PSG.edf",
+    "path": "data/SC4001E0-PSG.edf",
+    "bytes": 48338048,
+    "sha256": "2b40a18adf76af69a42d6db1f30f31d26b369f6d27ca0050ef30147ef892b131",
+    "git_blob_sha1": "ecb6a8639da27df7d5851c46cc3a87807c75fa73"
+  },
+  {
+    "url": "https://physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/SC4001EC-Hypnogram.edf",
+    "path": "data/SC4001EC-Hypnogram.edf",
+    "bytes": 4620,
+    "sha256": "a4cf67694ade1b52a0ddd06d5817fd45d2d3e8bac5302f640f3e9cfbbf12a996",
+    "git_blob_sha1": "e095b039716b7a9839da9de093a3e1592355e5e1"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/dslaborg/AnySleep/88e13e31b3fa02482b650a844f6665f2cbbdb82c/models/anysleep-run1.pth",
+    "path": "models/anysleep-run1.pth",
+    "bytes": 12763675,
+    "sha256": "9f305c0f81a58d36092bb88b04832a48f0f4dae940f31486cd2284e9c659483f",
+    "git_blob_sha1": "8e545c4af53a7466b0b9df26a3d554ced47ac12d"
+  }
+]

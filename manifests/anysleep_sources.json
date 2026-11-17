@@ -1,0 +1,29 @@
+{
+  "commit": "88e13e31b3fa02482b650a844f6665f2cbbdb82c",
+  "files": [
+    {
+      "path": "examples/anysleep_no_hydra.py",
+      "sha256": "b94a9b62216a663e2923138b42c9439ccfa7b94cc8ca95729e2548c80afe785f",
+      "git_blob_sha1": "c817c71ac7eba9fdc1aca6e6f1b9f7a681056304",
+      "expected_git_blob_sha1": "c817c71ac7eba9fdc1aca6e6f1b9f7a681056304"
+    },
+    {
+      "path": "examples/predict_edf_file_logits_plain.py",
+      "sha256": "992fb40d7caceddd727bfa840ff733c3c97ee49b0df2e36bf10a9678d657af44",
+      "git_blob_sha1": "6db0474e13cd84da5ec4a7c18025e6fc7fb40e6a",
+      "expected_git_blob_sha1": "6db0474e13cd84da5ec4a7c18025e6fc7fb40e6a"
+    },
+    {
+      "path": "base/model/anysleep.py",
+      "sha256": "d3b23f5314988a89d9b8319ef1ee224a8df62844acd749bdbdb66adaefc90c28",
+      "git_blob_sha1": "7b454a67627e1ce82df93aafb81d2cf6a00107a6",
+      "expected_git_blob_sha1": "7b454a67627e1ce82df93aafb81d2cf6a00107a6"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "773ab33afb82b4249e23cc758b37f82bad7e9afeb4bfd7386baa3bf2dc4be9bd",
+      "git_blob_sha1": "53ef8ed6ab468c58b5bdec238f6c6c6b46f425bb",
+      "expected_git_blob_sha1": "53ef8ed6ab468c58b5bdec238f6c6c6b46f425bb"
+    }
+  ]
+}

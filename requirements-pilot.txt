@@ -1,0 +1,14 @@
+# Keep the installed PyTorch build appropriate to the runtime; record it in environment.json.
+# For a fresh environment install torch explicitly from the official PyTorch package index.
+numpy>=1.26,<3
+scipy>=1.13,<2
+pandas==2.2.3
+scikit-learn>=1.5,<2
+mne>=1.8,<2
+matplotlib>=3.8,<4
+psutil>=5.9
+requests>=2.32
+yasa==0.8.1
+lightgbm>=4,<5
+antropy>=0.1.9
+# Every actual run exports pip-freeze.txt; broad bounds above are setup bounds, not a lock.
