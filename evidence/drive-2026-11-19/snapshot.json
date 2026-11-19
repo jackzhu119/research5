@@ -1,0 +1,226 @@
+{
+  "schema": "research5-drive-results-snapshot-v1",
+  "assembled_utc": "2026-11-19T02:55:07+00:00",
+  "source": "Google Drive Colab run output",
+  "snapshot_type": "per-file point-in-time readback",
+  "verified_v3_source": {
+    "colab_bundle_sha256": "d04cfb3dbc0f341ba97826d540a6bff5d66cd4ade64f825076cef062f74b4f06",
+    "verified_file_hashes_each_lane": 73,
+    "selected_file_sha256": {
+      "head_report.py": "bc02aff96ba75ad823fb266410d2aa6a880b9ecc850c31bb2199159f3c9bfbc4",
+      "head_train.py": "2b07719b06f6840888388d40f0a9fd7cafc1d15e073acbb3b925fc3ffb9f163d",
+      "cap_transfer.py": "f732349f105818fb9f262a23367d25fa7be44f6fd9c1c2fb80afc42e6aa83a9d",
+      "cap_manifest.json": "778ca3f4f4f96713bb8b364f49721847467ffc97673300d5bb85bd4aa2905433",
+      "PAPER_PLAN.md": "4b608900a90ecf307ea96ad1ba457a1231be27b8d596c2f87be88192c5e309ee"
+    }
+  },
+  "runs": {
+    "v3_training": {
+      "status": "SELECTED_PHASES_COMPLETE",
+      "worker_started_utc": "2026-11-19T01:39:08.282495+00:00",
+      "worker_finished_utc": "2026-11-19T01:47:20.367168+00:00",
+      "worker_elapsed_s": 492.08,
+      "launch_finished_utc": "2026-11-19T01:47:21.413847+00:00",
+      "environment": {
+        "device": "cuda",
+        "gpu": "NVIDIA L4",
+        "torch": "2.14.1+cu130",
+        "cuda": "13.0",
+        "python": "3.13.16",
+        "dependencies": {
+          "numpy": "2.4.6",
+          "scipy": "1.16.3",
+          "pandas": "3.1.1",
+          "mne": "1.13.2",
+          "scikit-learn": "1.6.1"
+        }
+      },
+      "completed_jobs": 21,
+      "expected_jobs": 21,
+      "paired_heldout_participants": 22
+    },
+    "v3_cap": {
+      "status": "SELECTED_PHASES_COMPLETE",
+      "worker_started_utc": "2026-11-19T01:38:47.380335+00:00",
+      "worker_finished_utc": "2026-11-19T01:55:13.736739+00:00",
+      "worker_elapsed_s": 986.36,
+      "launch_finished_utc": "2026-11-19T01:55:14.181929+00:00",
+      "environment": {
+        "device": "cuda",
+        "gpu": "Tesla T4",
+        "torch": "2.14.1+cu130",
+        "cuda": "13.0",
+        "python": "3.13.16",
+        "dependencies": {
+          "numpy": "2.4.6",
+          "scipy": "1.16.3",
+          "pandas": "3.1.1",
+          "mne": "1.13.2",
+          "scikit-learn": "1.6.1"
+        }
+      },
+      "completed_records": 14,
+      "expected_records": 14,
+      "normal_records": 10,
+      "pathology_records": 4,
+      "fingerprint": "989b32ac06c805526d76a42fcc545d2eb5022c7c33f0ad279d88c55a5e8e3a56"
+    },
+    "v2_pinfix": {
+      "status": "RUNNING",
+      "active_phase": "cap-verification-v2",
+      "last_controller_update_utc": "2026-11-19T02:53:54.046240+00:00",
+      "stage_b": {
+        "status": "COMPLETE",
+        "n_complete": 20,
+        "completed_utc": "2026-11-19T00:37:17.543938+00:00"
+      },
+      "stage_c": {
+        "status": "COMPLETE",
+        "n_complete": 20,
+        "completed_utc": "2026-11-19T02:40:50.572362+00:00"
+      },
+      "small_model": {
+        "status": "COMPLETE",
+        "n_participants": 20,
+        "completed_utc": "2026-11-19T02:44:49.104159+00:00"
+      },
+      "cap": {
+        "status": "RUNNING",
+        "completed_record_receipts": 1,
+        "snapshot_stage_started_utc": "2026-11-19T02:44:54.892308+00:00",
+        "completed_records": [
+          "n1"
+        ],
+        "partial_aggregation": true
+      }
+    }
+  },
+  "unaltered_drive_exports": [
+    {
+      "path": "v2-pinfix/cap_clean_group_metrics.csv",
+      "bytes": 917,
+      "sha256": "f3d4cb545e19a78b03979f59c721eb3a1d02a7e992bea5ddce35dfe2efada891",
+      "drive_modified_utc": "2026-11-19T02:52:57.866Z"
+    },
+    {
+      "path": "v2-pinfix/cap_v2_summary.json",
+      "bytes": 35156,
+      "sha256": "f4979b31e5aa6bbdf056dab356a2e0965e8bbd54c2db1f4ad62084f71ec853a3",
+      "drive_modified_utc": "2026-11-19T02:52:58.247Z"
+    },
+    {
+      "path": "v2-pinfix/decision_v2.json",
+      "bytes": 13941,
+      "sha256": "fff1681af3fb40d65279bb1f897e601ef34ad84ca4462b70c97cfa738ea4eeb5",
+      "drive_modified_utc": "2026-11-19T00:37:23.043Z"
+    },
+    {
+      "path": "v2-pinfix/group_metrics_v2.csv",
+      "bytes": 63402,
+      "sha256": "bae4c4dcf1306b5868353b975162d07de579bd5696022eb9593411bd30cfb836",
+      "drive_modified_utc": "2026-11-19T00:37:22.896Z"
+    },
+    {
+      "path": "v2-pinfix/oracle_logit_summary.csv",
+      "bytes": 1074,
+      "sha256": "b185b0b6c2227c63a9bfcc27869674ba096ef32ee5d9bc0e716e0550243ee4e7",
+      "drive_modified_utc": "2026-11-19T02:40:57.797Z"
+    },
+    {
+      "path": "v2-pinfix/small_model_clean_group_metrics.csv",
+      "bytes": 769,
+      "sha256": "34330017b9174bc4879a65eabc83f8673e302b382471541c08c885e6b09db41f",
+      "drive_modified_utc": "2026-11-19T02:44:45.371Z"
+    },
+    {
+      "path": "v2-pinfix/small_model_seen_vs_ood_summary.csv",
+      "bytes": 1723,
+      "sha256": "cda83110bc934c46e43548c684fc76bbe13431b0fae7812720a7875aa2726ae4",
+      "drive_modified_utc": "2026-11-19T02:44:49.091Z"
+    },
+    {
+      "path": "v2-pinfix/small_model_v2_summary.json",
+      "bytes": 26347,
+      "sha256": "086247f362aaaca7ba966a84d5d63dbef97c2e11cf4cc2407f723f970de6ade4",
+      "drive_modified_utc": "2026-11-19T02:44:49.102Z"
+    },
+    {
+      "path": "v2-pinfix/stage_c_v2_summary.json",
+      "bytes": 33783,
+      "sha256": "1f80e4d6275783567aef9a2f10e8a54b9a2567529887bd5d6492c7602313ae08",
+      "drive_modified_utc": "2026-11-19T02:41:00.198Z"
+    },
+    {
+      "path": "v3-cap/group_metrics.json",
+      "bytes": 450281,
+      "sha256": "d49534efa927166f9521d2e33bb15e6a6eff5550bfd6be229748dd02052a1442",
+      "drive_modified_utc": "2026-11-19T01:55:22.411Z"
+    },
+    {
+      "path": "v3-cap/participant_metrics.json",
+      "bytes": 444974,
+      "sha256": "28131314e2e13b9412f0afc3f580339fecbaceb84e02b6233a29b4d412f4a965",
+      "drive_modified_utc": "2026-11-19T01:55:22.299Z"
+    },
+    {
+      "path": "v3-cap/run_identity.json",
+      "bytes": 700,
+      "sha256": "30bd75fd73465e9ed6196f3e169254a0b0faf6019cced9e56ac0cfb053761eb9",
+      "drive_modified_utc": "2026-11-19T01:38:50.301Z"
+    },
+    {
+      "path": "v3-cap/summary.json",
+      "bytes": 25786,
+      "sha256": "38030d11021c91566cd9cb8a163b67b60d8f6f85bbaed9e78411d0fc739b9e1d",
+      "drive_modified_utc": "2026-11-19T01:55:22.365Z"
+    },
+    {
+      "path": "v3-training/head_arm_risk.csv",
+      "bytes": 30122,
+      "sha256": "8c9d507dc8b894d23ab0455df64ad1b862578caaa9d20675d39052c63e92ccbb",
+      "drive_modified_utc": "2026-11-19T01:47:20.319Z"
+    },
+    {
+      "path": "v3-training/head_report.md",
+      "bytes": 1440,
+      "sha256": "62159b456431b63d68f310c499b48b364181f12f249dcb1f76ebfc3d32924b02",
+      "drive_modified_utc": "2026-11-19T01:47:20.335Z"
+    },
+    {
+      "path": "v3-training/head_subject_clean.csv",
+      "bytes": 7452,
+      "sha256": "e51126c663a655e56d7ddafe6b9ca728c6c4c919923a6562f3516641c17723cb",
+      "drive_modified_utc": "2026-11-19T01:47:20.308Z"
+    },
+    {
+      "path": "v3-training/head_subject_contrasts.csv",
+      "bytes": 57359,
+      "sha256": "58ed3cdc2f609815c9bfa5ffc0d7d465d27f2d937395623041f036997c7aed58",
+      "drive_modified_utc": "2026-11-19T01:47:20.298Z"
+    },
+    {
+      "path": "v3-training/head_subject_risk.csv",
+      "bytes": 484728,
+      "sha256": "361e9d453613c43a76bb518012eeb3075de0f80a1ad2d3946446edeb1469dec2",
+      "drive_modified_utc": "2026-11-19T01:47:20.271Z"
+    },
+    {
+      "path": "v3-training/head_summary.json",
+      "bytes": 2794,
+      "sha256": "8a42842733209abf81acd3c9d5b08a7cd6b31aa6c749606d7b8b8d7d9b914cbc",
+      "drive_modified_utc": "2026-11-19T01:47:20.327Z"
+    },
+    {
+      "path": "v3-training/sleep_cohort.json",
+      "bytes": 29696,
+      "sha256": "ca11e7acab7eb4dd3234b2754c4dbfe3acfc56d204314f44e0630a2f5c8c1d6b",
+      "drive_modified_utc": "2026-11-19T01:39:08.327Z"
+    },
+    {
+      "path": "v3-training/weights_frozen_before_test.json",
+      "bytes": 1937,
+      "sha256": "c0637fef0bf50c0be22c747d7db0e5c303f617d85e0a01fc666072e1f4e1d243",
+      "drive_modified_utc": "2026-11-19T01:42:57.749Z"
+    }
+  ]
+}

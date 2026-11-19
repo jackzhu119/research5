@@ -1,0 +1,131 @@
+{
+  "state": "complete",
+  "expected_jobs": 21,
+  "completed_jobs": 21,
+  "missing_jobs": [],
+  "expected_heldout_subjects": 22,
+  "complete_primary_pairs": 22,
+  "complete_affected_pairs": 22,
+  "complete_clean_f1_pairs": 22,
+  "coverage_issues": [],
+  "candidate": "bounded_aug_cons",
+  "comparator": "context_aug_cons",
+  "primary_kind": "noise100",
+  "primary_region": "near",
+  "near_edge_gap_s": [
+    30,
+    300
+  ],
+  "near_upper_exclusive": true,
+  "bootstrap": {
+    "unit": "participant",
+    "replicates": 20000,
+    "seed": 20261119
+  },
+  "primary": {
+    "D": {
+      "n_subjects": 22,
+      "estimate": 0.018237934904601575,
+      "ci95": [
+        -0.008978675645342311,
+        0.05162738496071832
+      ]
+    },
+    "C": {
+      "n_subjects": 22,
+      "estimate": 0.01936026936026936,
+      "ci95": [
+        -0.008698092031425369,
+        0.05387205387205387
+      ]
+    },
+    "delta_S": {
+      "n_subjects": 22,
+      "estimate": -0.0011223344556677889,
+      "ci95": [
+        -0.0028058361391694723,
+        0.0005611672278338944
+      ]
+    },
+    "delta_new": {
+      "n_subjects": 22,
+      "estimate": -0.0005611672278338944,
+      "ci95": [
+        -0.0016835016835016834,
+        0.0005611672278338944
+      ]
+    },
+    "delta_corrected": {
+      "n_subjects": 22,
+      "estimate": 0.0005611672278338944,
+      "ci95": [
+        -0.0008417508417508417,
+        0.0022446689113355778
+      ]
+    },
+    "delta_flip": {
+      "n_subjects": 22,
+      "estimate": -0.0011223344556677889,
+      "ci95": [
+        -0.003367003367003367,
+        0.0011223344556677889
+      ]
+    }
+  },
+  "affected": {
+    "D": {
+      "n_subjects": 22,
+      "estimate": 0.0,
+      "ci95": null,
+      "interval_note": "no estimable empirical spread"
+    },
+    "C": {
+      "n_subjects": 22,
+      "estimate": 0.020202020202020193,
+      "ci95": [
+        -0.015151515151515148,
+        0.06565656565656564
+      ]
+    },
+    "delta_S": {
+      "n_subjects": 22,
+      "estimate": -0.020202020202020204,
+      "ci95": [
+        -0.06565656565656565,
+        0.015151515151515148
+      ]
+    },
+    "delta_new": {
+      "n_subjects": 22,
+      "estimate": 0.0,
+      "ci95": [
+        -0.01515151515151515,
+        0.01515151515151515
+      ]
+    },
+    "delta_corrected": {
+      "n_subjects": 22,
+      "estimate": 0.020202020202020204,
+      "ci95": [
+        -0.00505050505050505,
+        0.05555555555555556
+      ]
+    },
+    "delta_flip": {
+      "n_subjects": 22,
+      "estimate": 0.020202020202020197,
+      "ci95": [
+        -0.005050505050505053,
+        0.05555555555555553
+      ]
+    }
+  },
+  "clean_macro_f1_difference": {
+    "n_subjects": 22,
+    "estimate": -0.01363525625190888,
+    "ci95": [
+      -0.02149235256646243,
+      -0.005704468961518184
+    ]
+  }
+}

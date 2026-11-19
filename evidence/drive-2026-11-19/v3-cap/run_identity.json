@@ -1,0 +1,16 @@
+{
+  "manifest_sha256": "ecd36761940cd122819363afe2192ff1b96ae3e2527feca0fb72c3613698d6d9",
+  "module_sha256": "f732349f105818fb9f262a23367d25fa7be44f6fd9c1c2fb80afc42e6aa83a9d",
+  "methods": [
+    "official_global",
+    "clip_winsor_5iqr",
+    "blind_quality_masking",
+    "blind_channel_reroute"
+  ],
+  "core_source_sha256": {
+    "common_v2.py": "329f6ace312e1ca43577cbb942de0669e1b37dbcc8aeee9c30863eb5d1e7345e",
+    "cap_verification_v2.py": "b249d424d1aa6c0bf9232fa1de7f20844cd2052dd274b5b27e42cdda19eb6c39",
+    "support.py": "5368f4dc904d3ea8289116a54ff449175308dd6dfb348addf96569cf98521d53",
+    "anysleep_no_hydra.py": "b94a9b62216a663e2923138b42c9439ccfa7b94cc8ca95729e2548c80afe785f"
+  }
+}

@@ -1,0 +1,2 @@
+# Preserve the original line endings in the CSV exports.
+*.csv -text whitespace=cr-at-eol

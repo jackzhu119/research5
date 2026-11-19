@@ -1,0 +1,897 @@
+{
+  "stage_id": "cap-transfer-v3",
+  "fingerprint": "989b32ac06c805526d76a42fcc545d2eb5022c7c33f0ad279d88c55a5e8e3a56",
+  "updated_utc": "2026-11-19T01:55:11.885855+00:00",
+  "planned_records": [
+    "n4",
+    "n5",
+    "n6",
+    "n7",
+    "n8",
+    "n9",
+    "n10",
+    "n11",
+    "n12",
+    "n16",
+    "ins1",
+    "rbd1",
+    "plm1",
+    "sdb1"
+  ],
+  "complete_records": [
+    "n4",
+    "n5",
+    "n6",
+    "n7",
+    "n8",
+    "n9",
+    "n10",
+    "n11",
+    "n12",
+    "n16",
+    "ins1",
+    "rbd1",
+    "plm1",
+    "sdb1"
+  ],
+  "n_records_with_any_case": 14,
+  "n_complete": 14,
+  "partial_record_completed_jobs": {},
+  "primary": [
+    {
+      "cohort": "normal",
+      "checkpoint": "run1",
+      "kind": "clip",
+      "method": "blind_quality_masking",
+      "region": "near_30_300s",
+      "analysis_role": "primary",
+      "montage_stratum": "all_montages",
+      "n_records": 10,
+      "method_role": "primary_comparison",
+      "clean_error_rate": 0.13496732026143793,
+      "clean_error_rate_ci95": [
+        0.09771241830065361,
+        0.17450980392156862
+      ],
+      "corrupt_error_rate": 0.15021786492374725,
+      "corrupt_error_rate_ci95": [
+        0.11579520697167753,
+        0.18572984749455335
+      ],
+      "clean_cost_vs_official": 0.009259259259259262,
+      "clean_cost_vs_official_ci95": [
+        -0.010130718954248368,
+        0.033006535947712426
+      ],
+      "own_clean_spillover": 0.01525054466230937,
+      "own_clean_spillover_ci95": [
+        0.003812636165577342,
+        0.030718954248366022
+      ],
+      "corrupt_risk_vs_official": 0.026470588235294124,
+      "corrupt_risk_vs_official_ci95": [
+        0.0030501089324618757,
+        0.0533769063180828
+      ],
+      "official_spillover": -0.0019607843137254897,
+      "official_spillover_ci95": [
+        -0.005882352941176469,
+        0.0
+      ],
+      "flip_rate": 0.01917211328976035,
+      "flip_rate_ci95": [
+        0.007407407407407407,
+        0.03485838779956426
+      ],
+      "n_records_method_worse_than_official_corrupt": 7
+    },
+    {
+      "cohort": "normal",
+      "checkpoint": "run1",
+      "kind": "clip",
+      "method": "clip_winsor_5iqr",
+      "region": "near_30_300s",
+      "analysis_role": "primary",
+      "montage_stratum": "all_montages",
+      "n_records": 10,
+      "method_role": "primary_comparison",
+      "clean_error_rate": 0.12941176470588237,
+      "clean_error_rate_ci95": [
+        0.09596949891067538,
+        0.16470588235294117
+      ],
+      "corrupt_error_rate": 0.12745098039215688,
+      "corrupt_error_rate_ci95": [
+        0.09313725490196079,
+        0.16372821350762504
+      ],
+      "clean_cost_vs_official": 0.0037037037037037034,
+      "clean_cost_vs_official_ci95": [
+        0.0,
+        0.01111111111111111
+      ],
+      "own_clean_spillover": -0.0019607843137254897,
+      "own_clean_spillover_ci95": [
+        -0.005882352941176469,
+        0.0
+      ],
+      "corrupt_risk_vs_official": 0.0037037037037037034,
+      "corrupt_risk_vs_official_ci95": [
+        0.0,
+        0.01111111111111111
+      ],
+      "official_spillover": -0.0019607843137254897,
+      "official_spillover_ci95": [
+        -0.005882352941176469,
+        0.0
+      ],
+      "flip_rate": 0.00196078431372549,
+      "flip_rate_ci95": [
+        0.0,
+        0.0058823529411764705
+      ],
+      "n_records_method_worse_than_official_corrupt": 1
+    },
+    {
+      "cohort": "normal",
+      "checkpoint": "run1",
+      "kind": "clip",
+      "method": "official_global",
+      "region": "near_30_300s",
+      "analysis_role": "primary",
+      "montage_stratum": "all_montages",
+      "n_records": 10,
+      "method_role": "primary_comparison",
+      "clean_error_rate": 0.12570806100217866,
+      "clean_error_rate_ci95": [
+        0.0930255991285403,
+        0.16154684095860566
+      ],
+      "corrupt_error_rate": 0.12374727668845317,
+      "corrupt_error_rate_ci95": [
+        0.0901933551198257,
+        0.1602423747276686
+      ],
+      "clean_cost_vs_official": 0.0,
+      "clean_cost_vs_official_ci95": [
+        0.0,
+        0.0
+      ],
+      "own_clean_spillover": -0.0019607843137254897,
+      "own_clean_spillover_ci95": [
+        -0.005882352941176469,
+        0.0
+      ],
+      "corrupt_risk_vs_official": 0.0,
+      "corrupt_risk_vs_official_ci95": [
+        0.0,
+        0.0
+      ],
+      "official_spillover": -0.0019607843137254897,
+      "official_spillover_ci95": [
+        -0.005882352941176469,
+        0.0
+      ],
+      "flip_rate": 0.00196078431372549,
+      "flip_rate_ci95": [
+        0.0,
+        0.0058823529411764705
+      ],
+      "n_records_method_worse_than_official_corrupt": 0
+    },
+    {
+      "cohort": "normal",
+      "checkpoint": "run1",
+      "kind": "flat",
+      "method": "blind_quality_masking",
+      "region": "near_30_300s",
+      "analysis_role": "primary",
+      "montage_stratum": "all_montages",
+      "n_records": 10,
+      "method_role": "primary_comparison",
+      "clean_error_rate": 0.13496732026143793,
+      "clean_error_rate_ci95": [
+        0.09771241830065361,
+        0.17450980392156862
+      ],
+      "corrupt_error_rate": 0.15021786492374725,
+      "corrupt_error_rate_ci95": [
+        0.11579520697167753,
+        0.18572984749455335
+      ],
+      "clean_cost_vs_official": 0.009259259259259262,
+      "clean_cost_vs_official_ci95": [
+        -0.010130718954248368,
+        0.033006535947712426
+      ],
+      "own_clean_spillover": 0.01525054466230937,
+      "own_clean_spillover_ci95": [
+        0.003812636165577342,
+        0.030718954248366022
+      ],
+      "corrupt_risk_vs_official": 0.02461873638344227,
+      "corrupt_risk_vs_official_ci95": [
+        0.003594771241830064,
+        0.05000000000000001
+      ],
+      "official_spillover": -0.00010893246187363773,
+      "official_spillover_ci95": [
+        -0.005882352941176472,
+        0.005555555555555558
+      ],
+      "flip_rate": 0.01917211328976035,
+      "flip_rate_ci95": [
+        0.007407407407407407,
+        0.03485838779956426
+      ],
+      "n_records_method_worse_than_official_corrupt": 7
+    },
+    {
+      "cohort": "normal",
+      "checkpoint": "run1",
+      "kind": "flat",
+      "method": "clip_winsor_5iqr",
+      "region": "near_30_300s",
+      "analysis_role": "primary",
+      "montage_stratum": "all_montages",
+      "n_records": 10,
+      "method_role": "primary_comparison",
+      "clean_error_rate": 0.12941176470588237,
+      "clean_error_rate_ci95": [
+        0.09596949891067538,
+        0.16470588235294117
+      ],
+      "corrupt_error_rate": 0.12930283224400874,
+      "corrupt_error_rate_ci95": [
+        0.09389978213507626,
+        0.16797657952069694
+      ],
+      "clean_cost_vs_official": 0.0037037037037037034,
+      "clean_cost_vs_official_ci95": [
+        0.0,
+        0.01111111111111111
+      ],
+      "own_clean_spillover": -0.00010893246187363669,
+      "own_clean_spillover_ci95": [
+        -0.007625272331154684,
+        0.007407407407407411
+      ],
+      "corrupt_risk_vs_official": 0.0037037037037037047,
+      "corrupt_risk_vs_official_ci95": [
+        0.0,
+        0.009259259259259262
+      ],
+      "official_spillover": -0.00010893246187363773,
+      "official_spillover_ci95": [
+        -0.005882352941176472,
+        0.005555555555555558
+      ],
+      "flip_rate": 0.009477124183006535,
+      "flip_rate_ci95": [
+        0.0037037037037037034,
+        0.015250544662309368
+      ],
+      "n_records_method_worse_than_official_corrupt": 2
+    },
+    {
+      "cohort": "normal",
+      "checkpoint": "run1",
+      "kind": "flat",
+      "method": "official_global",
+      "region": "near_30_300s",
+      "analysis_role": "primary",
+      "montage_stratum": "all_montages",
+      "n_records": 10,
+      "method_role": "primary_comparison",
+      "clean_error_rate": 0.12570806100217866,
+      "clean_error_rate_ci95": [
+        0.0930255991285403,
+        0.16154684095860566
+      ],
+      "corrupt_error_rate": 0.12559912854030503,
+      "corrupt_error_rate_ci95": [
+        0.09106753812636166,
+        0.1645969498910675
+      ],
+      "clean_cost_vs_official": 0.0,
+      "clean_cost_vs_official_ci95": [
+        0.0,
+        0.0
+      ],
+      "own_clean_spillover": -0.00010893246187363773,
+      "own_clean_spillover_ci95": [
+        -0.005882352941176472,
+        0.005555555555555558
+      ],
+      "corrupt_risk_vs_official": 0.0,
+      "corrupt_risk_vs_official_ci95": [
+        0.0,
+        0.0
+      ],
+      "official_spillover": -0.00010893246187363773,
+      "official_spillover_ci95": [
+        -0.005882352941176472,
+        0.005555555555555558
+      ],
+      "flip_rate": 0.003812636165577342,
+      "flip_rate_ci95": [
+        0.0,
+        0.009477124183006535
+      ],
+      "n_records_method_worse_than_official_corrupt": 0
+    },
+    {
+      "cohort": "normal",
+      "checkpoint": "run1",
+      "kind": "noise",
+      "method": "blind_quality_masking",
+      "region": "near_30_300s",
+      "analysis_role": "primary",
+      "montage_stratum": "all_montages",
+      "n_records": 10,
+      "method_role": "primary_comparison",
+      "clean_error_rate": 0.13496732026143793,
+      "clean_error_rate_ci95": [
+        0.09771241830065361,
+        0.17450980392156862
+      ],
+      "corrupt_error_rate": 0.15021786492374725,
+      "corrupt_error_rate_ci95": [
+        0.11579520697167753,
+        0.18572984749455335
+      ],
+      "clean_cost_vs_official": 0.009259259259259262,
+      "clean_cost_vs_official_ci95": [
+        -0.010130718954248368,
+        0.033006535947712426
+      ],
+      "own_clean_spillover": 0.01525054466230937,
+      "own_clean_spillover_ci95": [
+        0.003812636165577342,
+        0.030718954248366022
+      ],
+      "corrupt_risk_vs_official": 0.02472766884531591,
+      "corrupt_risk_vs_official_ci95": [
+        2.7755575615628915e-18,
+        0.05784313725490196
+      ],
+      "official_spillover": -0.00021786492374727614,
+      "official_spillover_ci95": [
+        -0.013289760348583878,
+        0.012854030501089325
+      ],
+      "flip_rate": 0.01917211328976035,
+      "flip_rate_ci95": [
+        0.007407407407407407,
+        0.03485838779956426
+      ],
+      "n_records_method_worse_than_official_corrupt": 6
+    },
+    {
+      "cohort": "normal",
+      "checkpoint": "run1",
+      "kind": "noise",
+      "method": "clip_winsor_5iqr",
+      "region": "near_30_300s",
+      "analysis_role": "primary",
+      "montage_stratum": "all_montages",
+      "n_records": 10,
+      "method_role": "primary_comparison",
+      "clean_error_rate": 0.12941176470588237,
+      "clean_error_rate_ci95": [
+        0.09596949891067538,
+        0.16470588235294117
+      ],
+      "corrupt_error_rate": 0.12363834422657953,
+      "corrupt_error_rate_ci95": [
+        0.09019607843137255,
+        0.161437908496732
+      ],
+      "clean_cost_vs_official": 0.0037037037037037034,
+      "clean_cost_vs_official_ci95": [
+        0.0,
+        0.01111111111111111
+      ],
+      "own_clean_spillover": -0.0057734204793028305,
+      "own_clean_spillover_ci95": [
+        -0.015032679738562088,
+        0.0035947712418300686
+      ],
+      "corrupt_risk_vs_official": -0.0018518518518518515,
+      "corrupt_risk_vs_official_ci95": [
+        -0.007734204793028322,
+        0.004030501089324619
+      ],
+      "official_spillover": -0.00021786492374727614,
+      "official_spillover_ci95": [
+        -0.013289760348583878,
+        0.012854030501089325
+      ],
+      "flip_rate": 0.013180827886710239,
+      "flip_rate_ci95": [
+        0.007516339869281045,
+        0.018627450980392157
+      ],
+      "n_records_method_worse_than_official_corrupt": 1
+    },
+    {
+      "cohort": "normal",
+      "checkpoint": "run1",
+      "kind": "noise",
+      "method": "official_global",
+      "region": "near_30_300s",
+      "analysis_role": "primary",
+      "montage_stratum": "all_montages",
+      "n_records": 10,
+      "method_role": "primary_comparison",
+      "clean_error_rate": 0.12570806100217866,
+      "clean_error_rate_ci95": [
+        0.0930255991285403,
+        0.16154684095860566
+      ],
+      "corrupt_error_rate": 0.1254901960784314,
+      "corrupt_error_rate_ci95": [
+        0.09084967320261438,
+        0.16339869281045752
+      ],
+      "clean_cost_vs_official": 0.0,
+      "clean_cost_vs_official_ci95": [
+        0.0,
+        0.0
+      ],
+      "own_clean_spillover": -0.00021786492374727614,
+      "own_clean_spillover_ci95": [
+        -0.013289760348583878,
+        0.012854030501089325
+      ],
+      "corrupt_risk_vs_official": 0.0,
+      "corrupt_risk_vs_official_ci95": [
+        0.0,
+        0.0
+      ],
+      "official_spillover": -0.00021786492374727614,
+      "official_spillover_ci95": [
+        -0.013289760348583878,
+        0.012854030501089325
+      ],
+      "flip_rate": 0.015032679738562088,
+      "flip_rate_ci95": [
+        0.007407407407407407,
+        0.024400871459694988
+      ],
+      "n_records_method_worse_than_official_corrupt": 0
+    },
+    {
+      "cohort": "pathology",
+      "checkpoint": "run1",
+      "kind": "clip",
+      "method": "blind_quality_masking",
+      "region": "near_30_300s",
+      "analysis_role": "primary",
+      "montage_stratum": "all_montages",
+      "n_records": 4,
+      "method_role": "primary_comparison",
+      "clean_error_rate": 0.20969498910675383,
+      "clean_error_rate_ci95": [
+        0.06753812636165576,
+        0.35784313725490197
+      ],
+      "corrupt_error_rate": 0.2053376906318083,
+      "corrupt_error_rate_ci95": [
+        0.07734204793028324,
+        0.3333333333333333
+      ],
+      "clean_cost_vs_official": 0.0,
+      "clean_cost_vs_official_ci95": [
+        0.0,
+        0.0
+      ],
+      "own_clean_spillover": -0.004357298474945535,
+      "own_clean_spillover_ci95": [
+        -0.03703703703703704,
+        0.01906318082788671
+      ],
+      "corrupt_risk_vs_official": 0.00027233115468409605,
+      "corrupt_risk_vs_official_ci95": [
+        -0.023148148148148147,
+        0.01906318082788671
+      ],
+      "official_spillover": -0.004629629629629632,
+      "official_spillover_ci95": [
+        -0.013888888888888895,
+        0.0
+      ],
+      "flip_rate": 0.023420479302832243,
+      "flip_rate_ci95": [
+        0.004901960784313725,
+        0.046296296296296294
+      ],
+      "n_records_method_worse_than_official_corrupt": 2
+    },
+    {
+      "cohort": "pathology",
+      "checkpoint": "run1",
+      "kind": "clip",
+      "method": "clip_winsor_5iqr",
+      "region": "near_30_300s",
+      "analysis_role": "primary",
+      "montage_stratum": "all_montages",
+      "n_records": 4,
+      "method_role": "primary_comparison",
+      "clean_error_rate": 0.20969498910675383,
+      "clean_error_rate_ci95": [
+        0.06753812636165576,
+        0.35784313725490197
+      ],
+      "corrupt_error_rate": 0.20969498910675383,
+      "corrupt_error_rate_ci95": [
+        0.06753812636165576,
+        0.35784313725490197
+      ],
+      "clean_cost_vs_official": 0.0,
+      "clean_cost_vs_official_ci95": [
+        0.0,
+        0.0
+      ],
+      "own_clean_spillover": 0.0,
+      "own_clean_spillover_ci95": [
+        0.0,
+        0.0
+      ],
+      "corrupt_risk_vs_official": 0.004629629629629632,
+      "corrupt_risk_vs_official_ci95": [
+        0.0,
+        0.013888888888888895
+      ],
+      "official_spillover": -0.004629629629629632,
+      "official_spillover_ci95": [
+        -0.013888888888888895,
+        0.0
+      ],
+      "flip_rate": 0.0,
+      "flip_rate_ci95": [
+        0.0,
+        0.0
+      ],
+      "n_records_method_worse_than_official_corrupt": 1
+    },
+    {
+      "cohort": "pathology",
+      "checkpoint": "run1",
+      "kind": "clip",
+      "method": "official_global",
+      "region": "near_30_300s",
+      "analysis_role": "primary",
+      "montage_stratum": "all_montages",
+      "n_records": 4,
+      "method_role": "primary_comparison",
+      "clean_error_rate": 0.20969498910675383,
+      "clean_error_rate_ci95": [
+        0.06753812636165576,
+        0.35784313725490197
+      ],
+      "corrupt_error_rate": 0.20506535947712418,
+      "corrupt_error_rate_ci95": [
+        0.06753812636165576,
+        0.343954248366013
+      ],
+      "clean_cost_vs_official": 0.0,
+      "clean_cost_vs_official_ci95": [
+        0.0,
+        0.0
+      ],
+      "own_clean_spillover": -0.004629629629629632,
+      "own_clean_spillover_ci95": [
+        -0.013888888888888895,
+        0.0
+      ],
+      "corrupt_risk_vs_official": 0.0,
+      "corrupt_risk_vs_official_ci95": [
+        0.0,
+        0.0
+      ],
+      "official_spillover": -0.004629629629629632,
+      "official_spillover_ci95": [
+        -0.013888888888888895,
+        0.0
+      ],
+      "flip_rate": 0.004629629629629629,
+      "flip_rate_ci95": [
+        0.0,
+        0.013888888888888888
+      ],
+      "n_records_method_worse_than_official_corrupt": 0
+    },
+    {
+      "cohort": "pathology",
+      "checkpoint": "run1",
+      "kind": "flat",
+      "method": "blind_quality_masking",
+      "region": "near_30_300s",
+      "analysis_role": "primary",
+      "montage_stratum": "all_montages",
+      "n_records": 4,
+      "method_role": "primary_comparison",
+      "clean_error_rate": 0.20969498910675383,
+      "clean_error_rate_ci95": [
+        0.06753812636165576,
+        0.35784313725490197
+      ],
+      "corrupt_error_rate": 0.2053376906318083,
+      "corrupt_error_rate_ci95": [
+        0.07734204793028324,
+        0.3333333333333333
+      ],
+      "clean_cost_vs_official": 0.0,
+      "clean_cost_vs_official_ci95": [
+        0.0,
+        0.0
+      ],
+      "own_clean_spillover": -0.004357298474945535,
+      "own_clean_spillover_ci95": [
+        -0.03703703703703704,
+        0.01906318082788671
+      ],
+      "corrupt_risk_vs_official": 0.014161220043572977,
+      "corrupt_risk_vs_official_ci95": [
+        0.0,
+        0.028322440087145954
+      ],
+      "official_spillover": -0.01851851851851851,
+      "official_spillover_ci95": [
+        -0.06944444444444442,
+        0.013888888888888888
+      ],
+      "flip_rate": 0.023420479302832243,
+      "flip_rate_ci95": [
+        0.004901960784313725,
+        0.046296296296296294
+      ],
+      "n_records_method_worse_than_official_corrupt": 2
+    },
+    {
+      "cohort": "pathology",
+      "checkpoint": "run1",
+      "kind": "flat",
+      "method": "clip_winsor_5iqr",
+      "region": "near_30_300s",
+      "analysis_role": "primary",
+      "montage_stratum": "all_montages",
+      "n_records": 4,
+      "method_role": "primary_comparison",
+      "clean_error_rate": 0.20969498910675383,
+      "clean_error_rate_ci95": [
+        0.06753812636165576,
+        0.35784313725490197
+      ],
+      "corrupt_error_rate": 0.20969498910675383,
+      "corrupt_error_rate_ci95": [
+        0.058278867102396506,
+        0.3611111111111111
+      ],
+      "clean_cost_vs_official": 0.0,
+      "clean_cost_vs_official_ci95": [
+        0.0,
+        0.0
+      ],
+      "own_clean_spillover": 0.0,
+      "own_clean_spillover_ci95": [
+        -0.013888888888888888,
+        0.013888888888888888
+      ],
+      "corrupt_risk_vs_official": 0.01851851851851851,
+      "corrupt_risk_vs_official_ci95": [
+        -0.013888888888888888,
+        0.06944444444444442
+      ],
+      "official_spillover": -0.01851851851851851,
+      "official_spillover_ci95": [
+        -0.06944444444444442,
+        0.013888888888888888
+      ],
+      "flip_rate": 0.018518518518518517,
+      "flip_rate_ci95": [
+        0.004629629629629629,
+        0.032407407407407406
+      ],
+      "n_records_method_worse_than_official_corrupt": 1
+    },
+    {
+      "cohort": "pathology",
+      "checkpoint": "run1",
+      "kind": "flat",
+      "method": "official_global",
+      "region": "near_30_300s",
+      "analysis_role": "primary",
+      "montage_stratum": "all_montages",
+      "n_records": 4,
+      "method_role": "primary_comparison",
+      "clean_error_rate": 0.20969498910675383,
+      "clean_error_rate_ci95": [
+        0.06753812636165576,
+        0.35784313725490197
+      ],
+      "corrupt_error_rate": 0.19117647058823528,
+      "corrupt_error_rate_ci95": [
+        0.06753812636165576,
+        0.31481481481481477
+      ],
+      "clean_cost_vs_official": 0.0,
+      "clean_cost_vs_official_ci95": [
+        0.0,
+        0.0
+      ],
+      "own_clean_spillover": -0.01851851851851851,
+      "own_clean_spillover_ci95": [
+        -0.06944444444444442,
+        0.013888888888888888
+      ],
+      "corrupt_risk_vs_official": 0.0,
+      "corrupt_risk_vs_official_ci95": [
+        0.0,
+        0.0
+      ],
+      "official_spillover": -0.01851851851851851,
+      "official_spillover_ci95": [
+        -0.06944444444444442,
+        0.013888888888888888
+      ],
+      "flip_rate": 0.02777777777777778,
+      "flip_rate_ci95": [
+        0.0,
+        0.06944444444444445
+      ],
+      "n_records_method_worse_than_official_corrupt": 0
+    },
+    {
+      "cohort": "pathology",
+      "checkpoint": "run1",
+      "kind": "noise",
+      "method": "blind_quality_masking",
+      "region": "near_30_300s",
+      "analysis_role": "primary",
+      "montage_stratum": "all_montages",
+      "n_records": 4,
+      "method_role": "primary_comparison",
+      "clean_error_rate": 0.20969498910675383,
+      "clean_error_rate_ci95": [
+        0.06753812636165576,
+        0.35784313725490197
+      ],
+      "corrupt_error_rate": 0.2053376906318083,
+      "corrupt_error_rate_ci95": [
+        0.07734204793028324,
+        0.3333333333333333
+      ],
+      "clean_cost_vs_official": 0.0,
+      "clean_cost_vs_official_ci95": [
+        0.0,
+        0.0
+      ],
+      "own_clean_spillover": -0.004357298474945535,
+      "own_clean_spillover_ci95": [
+        -0.03703703703703704,
+        0.01906318082788671
+      ],
+      "corrupt_risk_vs_official": -0.013616557734204796,
+      "corrupt_risk_vs_official_ci95": [
+        -0.055555555555555566,
+        0.01470588235294118
+      ],
+      "official_spillover": 0.009259259259259262,
+      "official_spillover_ci95": [
+        0.0,
+        0.018518518518518524
+      ],
+      "flip_rate": 0.023420479302832243,
+      "flip_rate_ci95": [
+        0.004901960784313725,
+        0.046296296296296294
+      ],
+      "n_records_method_worse_than_official_corrupt": 1
+    },
+    {
+      "cohort": "pathology",
+      "checkpoint": "run1",
+      "kind": "noise",
+      "method": "clip_winsor_5iqr",
+      "region": "near_30_300s",
+      "analysis_role": "primary",
+      "montage_stratum": "all_montages",
+      "n_records": 4,
+      "method_role": "primary_comparison",
+      "clean_error_rate": 0.20969498910675383,
+      "clean_error_rate_ci95": [
+        0.06753812636165576,
+        0.35784313725490197
+      ],
+      "corrupt_error_rate": 0.21432461873638342,
+      "corrupt_error_rate_ci95": [
+        0.06753812636165576,
+        0.37173202614379086
+      ],
+      "clean_cost_vs_official": 0.0,
+      "clean_cost_vs_official_ci95": [
+        0.0,
+        0.0
+      ],
+      "own_clean_spillover": 0.004629629629629632,
+      "own_clean_spillover_ci95": [
+        0.0,
+        0.013888888888888895
+      ],
+      "corrupt_risk_vs_official": -0.004629629629629629,
+      "corrupt_risk_vs_official_ci95": [
+        -0.013888888888888888,
+        0.0
+      ],
+      "official_spillover": 0.009259259259259262,
+      "official_spillover_ci95": [
+        0.0,
+        0.018518518518518524
+      ],
+      "flip_rate": 0.004629629629629629,
+      "flip_rate_ci95": [
+        0.0,
+        0.013888888888888888
+      ],
+      "n_records_method_worse_than_official_corrupt": 0
+    },
+    {
+      "cohort": "pathology",
+      "checkpoint": "run1",
+      "kind": "noise",
+      "method": "official_global",
+      "region": "near_30_300s",
+      "analysis_role": "primary",
+      "montage_stratum": "all_montages",
+      "n_records": 4,
+      "method_role": "primary_comparison",
+      "clean_error_rate": 0.20969498910675383,
+      "clean_error_rate_ci95": [
+        0.06753812636165576,
+        0.35784313725490197
+      ],
+      "corrupt_error_rate": 0.21895424836601307,
+      "corrupt_error_rate_ci95": [
+        0.06753812636165576,
+        0.37173202614379086
+      ],
+      "clean_cost_vs_official": 0.0,
+      "clean_cost_vs_official_ci95": [
+        0.0,
+        0.0
+      ],
+      "own_clean_spillover": 0.009259259259259262,
+      "own_clean_spillover_ci95": [
+        0.0,
+        0.018518518518518524
+      ],
+      "corrupt_risk_vs_official": 0.0,
+      "corrupt_risk_vs_official_ci95": [
+        0.0,
+        0.0
+      ],
+      "official_spillover": 0.009259259259259262,
+      "official_spillover_ci95": [
+        0.0,
+        0.018518518518518524
+      ],
+      "flip_rate": 0.009259259259259259,
+      "flip_rate_ci95": [
+        0.0,
+        0.018518518518518517
+      ],
+      "n_records_method_worse_than_official_corrupt": 0
+    }
+  ],
+  "limits": [
+    "CAP is a second data source, not proven checkpoint-independent data; author external evaluation exposure may exist.",
+    "Ten eligible normal controls (n4-n12,n16) and four single-record pathologies are reported separately; n1-n3 were development-exposed and excluded. n13-n15 have missing physical units and were technically excluded before inference.",
+    "Some normal records use explicitly frozen alternate available EEG/EOG montages; n16 has EEG only. Montage-specific results are reported separately. No missing-unit calibration is inferred.",
+    "All injected artifacts are synthetic; unperturbed recordings are not verified artifact-free. Detector flag rates are not natural-artifact false-positive estimates.",
+    "Only run1 full cohort is primary. run2/3 are a fixed seven-record one-position noise sensitivity, not full-cohort replication.",
+    "A finite inference budget may leave planned records pending; partial outputs do not constitute completed confirmation."
+  ],
+  "partial_aggregation": false
+}

@@ -1,0 +1,218 @@
+{
+  "study": "cap-transfer-v3",
+  "frozen_utc": "2026-11-19T01:05:58.499485+00:00",
+  "dataset": "https://physionet.org/content/capslpdb/1.0.0/",
+  "primary": {
+    "checkpoint": "run1",
+    "methods": [
+      "official_global",
+      "clip_winsor_5iqr",
+      "blind_quality_masking"
+    ],
+    "positions": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "kinds": [
+      "flat",
+      "clip",
+      "noise"
+    ],
+    "corrupt_channel_index": 0,
+    "duration_s": 30,
+    "noise_sd_uv": 100,
+    "clip_uv": 20,
+    "seed": 20261117,
+    "target_region": "near_30_300s",
+    "estimand": "method_corrupt_error_minus_official_corrupt_error_on_identical_untouched_epochs"
+  },
+  "records": [
+    {
+      "record": "n4",
+      "cohort": "normal",
+      "pathology": "none",
+      "channels": [
+        "C4-A1",
+        "F4-C4",
+        "EOG dx"
+      ],
+      "montage_stratum": "alternate_three_channel",
+      "checkpoint_sensitivity": true
+    },
+    {
+      "record": "n5",
+      "cohort": "normal",
+      "pathology": "none",
+      "channels": [
+        "C4-A1",
+        "F4-C4",
+        "ROC-LOC"
+      ],
+      "montage_stratum": "original_three_channel",
+      "checkpoint_sensitivity": false
+    },
+    {
+      "record": "n6",
+      "cohort": "normal",
+      "pathology": "none",
+      "channels": [
+        "C3-A2",
+        "O2-A1",
+        "LOC-A1"
+      ],
+      "montage_stratum": "alternate_three_channel",
+      "checkpoint_sensitivity": false
+    },
+    {
+      "record": "n7",
+      "cohort": "normal",
+      "pathology": "none",
+      "channels": [
+        "C3-A2",
+        "O2-A1",
+        "LOC-A1"
+      ],
+      "montage_stratum": "alternate_three_channel",
+      "checkpoint_sensitivity": false
+    },
+    {
+      "record": "n8",
+      "cohort": "normal",
+      "pathology": "none",
+      "channels": [
+        "C3-A2",
+        "F4-C4",
+        "EOG-L"
+      ],
+      "montage_stratum": "alternate_three_channel",
+      "checkpoint_sensitivity": false
+    },
+    {
+      "record": "n9",
+      "cohort": "normal",
+      "pathology": "none",
+      "channels": [
+        "C3-A2",
+        "O2-A1",
+        "LOC-A1"
+      ],
+      "montage_stratum": "alternate_three_channel",
+      "checkpoint_sensitivity": false
+    },
+    {
+      "record": "n10",
+      "cohort": "normal",
+      "pathology": "none",
+      "channels": [
+        "C4-A1",
+        "F4-C4",
+        "ROC-LOC"
+      ],
+      "montage_stratum": "original_three_channel",
+      "checkpoint_sensitivity": true
+    },
+    {
+      "record": "n11",
+      "cohort": "normal",
+      "pathology": "none",
+      "channels": [
+        "C4-A1",
+        "F4-C4",
+        "ROC-LOC"
+      ],
+      "montage_stratum": "original_three_channel",
+      "checkpoint_sensitivity": false
+    },
+    {
+      "record": "n12",
+      "cohort": "normal",
+      "pathology": "none",
+      "channels": [
+        "C4-A1",
+        "C3-A2",
+        "LOC / A2"
+      ],
+      "montage_stratum": "alternate_three_channel",
+      "checkpoint_sensitivity": false
+    },
+    {
+      "record": "n16",
+      "cohort": "normal",
+      "pathology": "none",
+      "channels": [
+        "C4-A1",
+        "F4-C4"
+      ],
+      "montage_stratum": "EEG_only_two_channel",
+      "checkpoint_sensitivity": true
+    },
+    {
+      "record": "ins1",
+      "cohort": "pathology",
+      "pathology": "insomnia",
+      "channels": [
+        "C4-A1",
+        "F4-C4",
+        "ROC-LOC"
+      ],
+      "montage_stratum": "original_three_channel",
+      "checkpoint_sensitivity": true
+    },
+    {
+      "record": "rbd1",
+      "cohort": "pathology",
+      "pathology": "REM_behavior_disorder",
+      "channels": [
+        "C4-A1",
+        "F4-C4",
+        "ROC-LOC"
+      ],
+      "montage_stratum": "original_three_channel",
+      "checkpoint_sensitivity": true
+    },
+    {
+      "record": "plm1",
+      "cohort": "pathology",
+      "pathology": "periodic_leg_movements",
+      "channels": [
+        "C4-A1",
+        "F4-C4",
+        "ROC-LOC"
+      ],
+      "montage_stratum": "original_three_channel",
+      "checkpoint_sensitivity": true
+    },
+    {
+      "record": "sdb1",
+      "cohort": "pathology",
+      "pathology": "sleep_disordered_breathing",
+      "channels": [
+        "C4-A1",
+        "F4-C4",
+        "ROC-LOC"
+      ],
+      "montage_stratum": "original_three_channel",
+      "checkpoint_sensitivity": true
+    }
+  ],
+  "prior_development_exclusions": [
+    "n1",
+    "n2",
+    "n3"
+  ],
+  "physical_unit_exclusions": [
+    {
+      "record": "n13",
+      "reason": "Before any model inference: all selected EDF physical-dimension fields are blank; absolute voltage calibration cannot be verified. No assumed microvolt conversion and no replacement record."
+    },
+    {
+      "record": "n14",
+      "reason": "Before any model inference: all selected EDF physical-dimension fields are blank; absolute voltage calibration cannot be verified. No assumed microvolt conversion and no replacement record."
+    },
+    {
+      "record": "n15",
+      "reason": "Before any model inference: all selected EDF physical-dimension fields are blank; absolute voltage calibration cannot be verified. No assumed microvolt conversion and no replacement record."
+    }
+  ]
+}
